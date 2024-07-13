@@ -184,7 +184,19 @@ main {
 .burger-menu__line:not(:last-child) {
     margin-bottom: 4px;
 }
-
+.burger-menu__line:not(:last-child) {
+    margin-bottom: 4px;
+}
+.burger-menu-cross .burger-menu__line:nth-child(1) {
+    transform: rotate(45deg);
+    margin-bottom: -4px;
+}
+.burger-menu-cross .burger-menu__line:nth-child(2) {
+    display: none;
+}
+.burger-menu-cross .burger-menu__line:nth-child(3) {
+    transform: rotate(-45deg);
+}
 
 
 

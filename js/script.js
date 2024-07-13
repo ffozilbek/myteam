@@ -7,5 +7,8 @@ const elNav = document.querySelector(".site-header__nav"),
         elBurgerMenu.addEventListener("click", ()=> {
             elNav.classList.toggle("site-header__nav-open")
             elNavBar.classList.toggle("nav__navbar-open");
+
+            // BURGER MENU ANIMATION
+            elBurgerMenu.classList.toggle("burger-menu-cross");
         })
     }
