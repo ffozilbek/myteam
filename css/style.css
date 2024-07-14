@@ -417,6 +417,54 @@ main {
 }
 
 
+/* SITE FOOTER */
+.site-footer {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    background-color: var(--dark-green);
+    color: var(--white);
+}
+.footer__container {
+    position: relative;
+}
+.site-footer__left-side {
+    width: 100%;
+    display: flex;
+    align-items: self-start;
+    justify-content: space-between;
+}
+.site-footer__logo {
+    margin-bottom: 25px;
+}
+.social-link-list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.social-link-item:not(:last-child) {
+    margin-right: 16px;
+}
+.social-link {
+    text-decoration: none;
+    color: var(--white);
+}
+.adress-list {
+    position: absolute;
+    top: 0;
+    left: 285px;
+    list-style: none;
+}
+.adress-list__item {
+    color: rgba(255, 255, 255, 0.6);
+}
+.site-footer__right-side {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+
 /* MEDIA QUERIES */
 
 @media only screen and (max-width: 1000px) {
@@ -543,6 +591,22 @@ main {
     .site-review__user-work {
         margin-bottom: 16px;
     }
+
+    .site-footer__left-side {
+        flex-direction: column;
+    }
+    .adress-list {
+        left: inherit;
+        right: 20px;
+        text-align: right;
+    }
+    .site-footer__logo {
+        margin-bottom: 53px;
+    }
+    .site-footer__logo-links {
+        margin-bottom: 32px;
+    }
+
 }
 
 @media only screen and (max-width: 550px) {
@@ -629,6 +693,57 @@ main {
         margin-left: 0;
         margin-top: 24px;
     }
+
+    .site-footer {
+        padding-top: 66px;
+        padding-bottom: 64px;
+    }
+    .footer__container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .site-footer__left-side {
+        align-items: center;
+        justify-content: center;
+    }
+    .site-footer__right-side {
+        position: static;
+        text-align: center;
+    }
+    .site-footer__logo-links {
+        width: 100%;
+        margin-bottom: 24px;
+    }
+    .site-footer__logo {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 24px;
+    }
+    .site-footer__nav {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0;
+    }
+    .site-footer__nav-item {
+        width: auto;
+    }
+    .site-footer__nav-item:not(:last-child) {
+        margin-bottom: 0;
+        margin-right: 24px;
+    }
+    .adress-list {
+        position: static;
+        text-align: center;
+        order: 0;
+        margin-bottom: 40px;
+    }
+    .social-link-list {
+        order: 1;
+        margin-bottom: 16px;
+    }
+
 }
 
 @media only screen and (max-width: 375px) {
