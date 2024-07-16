@@ -12,3 +12,15 @@ const elNav = document.querySelector(".site-header__nav"),
             elBurgerMenu.classList.toggle("burger-menu-cross");
         })
     }
+
+
+// ABOUT CARD OPEN
+const elsCart = document.querySelectorAll(".carts__cart");
+
+elsCart.forEach(elCart => {
+    const elCartButton = elCart.querySelector(".carts__button");
+
+    elCartButton.addEventListener("click", ()=> {
+        elCart.classList.toggle("carts__cart-open");
+    })
+})
