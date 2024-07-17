@@ -84,6 +84,20 @@ main {
     flex-grow: 1;
 }
 
+/* PLACECHOLDER STYLE */
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: rgba(255, 255, 255, 0.6);
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: rgba(255, 255, 255, 0.6);
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: rgba(255, 255, 255, 0.6);
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: rgba(255, 255, 255, 0.6);
+  }
+
 /* CONTAINER */
 .container {
     max-width: 1150px;
@@ -105,6 +119,7 @@ main {
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
     white-space: nowrap;
+    display: inline-block;
 }
 .button-transparent {
     background-color: transparent;
@@ -440,9 +455,6 @@ main {
     margin-left: auto;
     margin-right: auto;
 }
-.carts__cart-icons {
-    /* margin-bottom: 63px; */
-}
 .carts__cart-icon:not(:last-child) {
     margin-right: 16px;
 }
@@ -540,8 +552,6 @@ main {
     background-repeat: no-repeat;
     background-position: top 0% left 0%;
 }
-.site-clients__container {
-}
 .site-clients__heading {
     text-align: center;
     font-size: 48px;
@@ -583,6 +593,80 @@ main {
 }
 .site-cta__button {
     margin-left: 20px;
+}
+
+/* CONTACT FORM */
+
+.site-contact {
+    padding-top: 47px;
+    padding-bottom: 120px;
+    background-image: url("../img/contact-pattern.svg");
+    background-repeat: no-repeat;
+    background-position: top 100% left calc(100% + 100px);
+}
+.site-contact__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.site-contact__info {
+    max-width: 540px;
+    width: 100%;
+    margin-right: 2.7%;
+}
+.site-contact__heading {
+    font-size: 64px;
+    line-height: 100px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+.site-contact__text {
+    font-size: 32px;
+    line-height: 48px;
+    font-weight: bold;
+    color: var(--light-coral);
+    margin-bottom: 32px;
+}
+.contact-item {
+    align-items: center;
+}
+.contact-item .item__text {
+    font-size: 18px;
+}
+
+.contact-item:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+/* CONTACT FORM */
+
+.site-contact__form {
+    max-width: 542px;
+    width: 100%;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+}
+.form__input,.form__textarea {
+    border: 0;
+    outline: none;
+    padding: 0px 14px 17px;
+    background-color: transparent;
+    border-bottom: 1px solid var(--white);
+    color: var(--white);
+    font-size: 15px;
+    letter-spacing: -0.12px;
+    font-weight: 600;
+}
+.form__textarea {
+    resize: none;
+    padding-bottom: 58px;
+    margin-bottom: 24px;
+}
+
+.form__input:not(:last-child) {
+    margin-bottom: 24px;
 }
 
 
@@ -664,6 +748,11 @@ main {
         padding-left: 77px;
         padding-right: 77px;
     }
+
+    .site-contact {
+        padding-bottom: 200px;
+    }
+
 }
 
 @media only screen and (max-width: 950px) {
@@ -676,6 +765,11 @@ main {
         margin-right: 0;
         margin-bottom: 64px;
     }
+
+    .site-contact__info {
+        max-width: 400px;
+    }
+
 }
 
 @media only screen and (max-width: 768px) {
@@ -791,6 +885,31 @@ main {
         padding-top: 100px;
         padding-bottom: 100px;
         background-position: top -100px left 0px;
+    }
+
+    .site-contact {
+        padding-bottom: 112px;
+    }
+    .site-contact__container {
+        flex-direction: column;
+        padding-left: 113px;
+        padding-right: 113px;
+    }
+    .site-contact__info {
+        max-width: 515px;
+        text-align: center;
+        margin-right: 0;
+        margin-bottom: 64px;
+    }
+    .site-contact__heading {
+        line-height: 56px;
+        margin-bottom: 24px;
+    }
+    .site-contact__text {
+        margin-bottom: 24px;
+    }
+    .contact-item {
+        text-align: left;
     }
 
     .site-footer__left-side {
@@ -954,6 +1073,30 @@ main {
         margin-top: 24px;
     }
 
+    .site-contact {
+        background-position: top calc(100% + 100px) left calc(100% + 100px);
+    }
+    .site-contact__container {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    .site-contact__heading {
+        font-size: 40px;
+        line-height: 40px;
+        margin-bottom: 16px;
+    }
+    .contact-item {
+        flex-direction: row;
+        text-align: left;
+    }
+    .contact-item:not(:last-child) {
+        margin-bottom: 24px;
+    }
+    .contact-item .item__icon{
+        margin-right: 23px;
+    }
+
+
     .site-footer {
         padding-top: 66px;
         padding-bottom: 64px;
@@ -1063,4 +1206,11 @@ main {
         padding-right: 24px;
     }
 
+    .contact-item {
+        flex-direction: row;
+        text-align: left;
+    }
+    .contact-item:not(:last-child) {
+        margin-bottom: 24px;
+    }
 }
