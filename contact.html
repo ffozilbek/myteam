@@ -88,12 +88,28 @@
                     </ul>
                 </div>
                 <div class="site-contact__form">
-                    <form class="form" action="">
-                        <input class="form__input" type="text" placeholder="Name" required>
-                        <input class="form__input" type="email" placeholder="Email Address" required>
-                        <input class="form__input" type="text" placeholder="Company Name" required>
-                        <input class="form__input" type="text" placeholder="Title" required>
-                        <textarea class="form__textarea" name="message" id="message" placeholder="Message"></textarea>
+                    <form id="form" action="">
+                        <div class="form__input-wrapper">
+                            <input class="form__input js-input-name" type="text" placeholder="Name">
+                            <span class="error name_error"></span>
+                        </div>
+                        <div class="form__input-wrapper">
+                            <input class="form__input js-input-mail" type="email" placeholder="Email Address">
+                            <span class="error mail_error"></span>
+                        </div>
+                        <div class="form__input-wrapper">
+                            <input class="form__input js-input-compname" type="text" placeholder="Company Name">
+                            <span class="error cname_error"></span>
+                        </div>
+                        <div class="form__input-wrapper">
+                            <input class="form__input js-input-title" type="text" placeholder="Title">
+                            <span class="error title_error"></span>
+                        </div>
+                        <div class="form__input-wrapper">
+                            <textarea class="form__textarea js-textarea" name="message" id="message"
+                                placeholder="Message"></textarea>
+                            <span class="error message_error"></span>
+                        </div>
                         <div>
                             <button type="submit" class="button button-white">Submit</button>
                         </div>

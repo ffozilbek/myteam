@@ -606,7 +606,7 @@ main {
 }
 .site-contact__container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 .site-contact__info {
@@ -648,6 +648,13 @@ main {
     display: flex;
     flex-direction: column;
 }
+.form__input-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.form__input-wrapper:not(:last-child) {
+    margin-bottom: 24px;
+}
 .form__input,.form__textarea {
     border: 0;
     outline: none;
@@ -662,12 +669,32 @@ main {
 .form__textarea {
     resize: none;
     padding-bottom: 58px;
-    margin-bottom: 24px;
+}
+.required {
+    border-bottom-color: var(--light-coral);
+}
+.required::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: rgb(246, 126, 126,0.6);
+  }
+  .required::-moz-placeholder { /* Firefox 19+ */
+    color: rgb(246, 126, 126,0.6);
+  }
+  .required:-ms-input-placeholder { /* IE 10+ */
+    color: rgb(246, 126, 126,0.6);
+  }
+  .required:-moz-placeholder { /* Firefox 18- */
+    color: rgb(246, 126, 126,0.6);
+  }
+
+  .verified-field {
+    border-bottom-color: var(--rapture-blue);
+}
+.error {
+    font-size: 10px;
+    font-style: italic;
+    color: var(--light-coral);
 }
 
-.form__input:not(:last-child) {
-    margin-bottom: 24px;
-}
 
 
 /* SITE FOOTER */
