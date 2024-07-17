@@ -701,6 +701,9 @@ main {
     text-decoration: none;
     color: var(--white);
 }
+.social-link:hover {
+    color: var(--light-coral);
+}
 .adress-list {
     position: absolute;
     top: 0;
